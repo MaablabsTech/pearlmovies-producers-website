@@ -4,7 +4,7 @@
 			<div class="row">
 				<div class="col-12 col-md-8 order-md-1 col-lg-12 col-xl-4">
 					<div class="footer__logo">
-						<img src="img/logo.svg" alt="">
+						<img src="{{ URL::asset('assets/img/logo.svg') }}" alt="">
 					</div>
 					<p class="footer__tagline">Movies & TV Shows, Online cinema,<br> Movie database HTML Template. <br>The perfect choice for your project.</p>
 
