@@ -7,22 +7,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/splide.min.css">
-	<link rel="stylesheet" href="css/slimselect.css">
-	<link rel="stylesheet" href="css/plyr.css">
-	<link rel="stylesheet" href="css/photoswipe.css">
-	<link rel="stylesheet" href="css/default-skin.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="{{ URL::asset('assets/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ URL::asset('assets/css/splide.min.css') }}">
+	<link rel="stylesheet" href="{{ URL::asset('assets/css/slimselect.css') }}">
+	<link rel="stylesheet" href="{{ URL::asset('assets/css/plyr.css') }}">
+	<link rel="stylesheet" href="{{ URL::asset('assets/css/photoswipe.css') }}">
+	<link rel="stylesheet" href="{{ URL::asset('assets/css/default-skin.css') }}">
+	<link rel="stylesheet" href="{{ URL::asset('assets/css/main.css') }}">
 
 	<!-- Favicons -->
-	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
-	<link rel="apple-touch-icon" href="icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" href="{{ URL::asset('assets/icon/favicon-32x32.png') }}" sizes="32x32">
+	<link rel="apple-touch-icon" href="{{ URL::asset('assets/icon/favicon-32x32.png') }}">
 
 	<meta name="description" content="Movie partners Template">
 	<meta name="keywords" content="">
 	<meta name="author" content="Maablabs Technologies Ltd">
-	<title>MTL – Movie partners Template</title>
+    <title>{{config('app.name')}} – Movie partners Template</title>
 
 </head>
 <body>
@@ -34,7 +34,7 @@
 					<div class="header__content">
 						<!-- header logo -->
 						<a href="index.html" class="header__logo">
-							<img src="img/logo.svg" alt="">
+							<img src="{{ URL::asset('assets/img/logo.svg') }}" alt="">
 						</a>
 						<!-- end header logo -->
 
@@ -249,7 +249,7 @@
 						<div class="splide__track">
 							<ul class="splide__list">
 								<li class="splide__slide">
-									<div class="hero__slide" data-bg="img/bg/slide__bg-1.jpg">
+									<div class="hero__slide" data-bg="{{ URL::asset('assets/imgbg/slide__bg-1.jpg') }}"">
 										<div class="hero__content">
 											<h2 class="hero__title">Savage Beauty <sub>9.8</sub></h2>
 											<p class="hero__text">A brilliant scientist discovers a way to harness the power of the ocean's currents to create a new, renewable energy source. But when her groundbreaking technology falls into the wrong hands, she must race against time to stop it from being used for evil.</p>
@@ -267,7 +267,7 @@
 									</div>
 								</li>
 								<li class="splide__slide">
-									<div class="hero__slide" data-bg="img/bg/slide__bg-2.jpg">
+									<div class="hero__slide" data-bg="{{ URL::asset('assets/imgbg/slide__bg-2.jpg') }}"">
 										<div class="hero__content">
 											<h2 class="hero__title">Voices from the Other Side <sub>7.1</sub></h2>
 											<p class="hero__text">In a world where magic is outlawed and hunted, a young witch must use her powers to fight back against the corrupt authorities who seek to destroy her kind.</p>
@@ -284,7 +284,7 @@
 									</div>
 								</li>
 								<li class="splide__slide">
-									<div class="hero__slide" data-bg="img/bg/slide__bg-3.jpg">
+									<div class="hero__slide" data-bg="{{ URL::asset('assets/imgbg/slide__bg-3.jpg') }}"">
 										<div class="hero__content">
 											<h2 class="hero__title">Endless Horizon <sub>8.6</sub></h2>
 											<p class="hero__text">When a renowned archaeologist goes missing, his daughter sets out on a perilous journey to the heart of the Amazon rainforest to find him. Along the way, she discovers a hidden city and a dangerous conspiracy that threatens the very balance of power in the world.</p>
@@ -353,7 +353,7 @@
 						<div class="col-6 col-sm-12 col-lg-6 col-xxl-4">
 							<div class="item item--list">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/1.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/1.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -387,7 +387,7 @@
 						<div class="col-6 col-sm-12 col-lg-6 col-xxl-4">
 							<div class="item item--list">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/2.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/2.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -420,7 +420,7 @@
 						<div class="col-6 col-sm-12 col-lg-6 col-xxl-4">
 							<div class="item item--list">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/3.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/3.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -455,7 +455,7 @@
 						<div class="col-6 col-sm-12 col-lg-6 col-xxl-4">
 							<div class="item item--list">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/4.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/4.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -489,7 +489,7 @@
 						<div class="col-6 col-sm-12 col-lg-6 col-xxl-4">
 							<div class="item item--list">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/5.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/5.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -523,7 +523,7 @@
 						<div class="col-6 col-sm-12 col-lg-6 col-xxl-4">
 							<div class="item item--list">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/6.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/6.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -560,7 +560,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/7.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/7.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -581,7 +581,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/8.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/8.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -601,7 +601,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/9.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/9.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -623,7 +623,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/10.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/10.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -644,7 +644,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/11.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/11.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -665,7 +665,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/12.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/12.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -685,7 +685,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/13.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/13.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -707,7 +707,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/14.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/14.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -728,7 +728,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/15.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/15.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -749,7 +749,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/16.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/16.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -769,7 +769,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/17.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/17.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -791,7 +791,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/18.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/18.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -816,7 +816,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/1.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/1.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -836,7 +836,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/2.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/2.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -858,7 +858,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/3.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/3.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -879,7 +879,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/4.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/4.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -900,7 +900,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/5.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/5.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -920,7 +920,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/6.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/6.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -941,7 +941,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/7.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/7.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -962,7 +962,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/8.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/8.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -984,7 +984,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/9.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/9.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -1005,7 +1005,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/10.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/10.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -1026,7 +1026,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/11.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/11.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -1046,7 +1046,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/12.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/12.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -1072,7 +1072,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/13.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/13.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -1094,7 +1094,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/14.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/14.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -1115,7 +1115,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/15.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/15.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -1136,7 +1136,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/16.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/16.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -1156,7 +1156,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/17.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/17.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -1177,7 +1177,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/18.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/18.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -1197,7 +1197,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/1.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/1.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -1219,7 +1219,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/2.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/2.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -1240,7 +1240,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/3.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/3.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -1262,7 +1262,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/4.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/4.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -1283,7 +1283,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/5.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/5.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -1304,7 +1304,7 @@
 						<div class="col-6 col-sm-4 col-lg-3 col-xl-2">
 							<div class="item">
 								<a href="details1.html" class="item__cover">
-									<img src="img/covers/6.png" alt="">
+									<img src="{{ URL::asset('assets/img/covers/6.png') }}" alt="">
 									<span class="item__play">
 										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 									</span>
@@ -1356,7 +1356,7 @@
 								<li class="splide__slide">
 									<div class="item item--carousel">
 										<a href="details1.html" class="item__cover">
-											<img src="img/covers/7.png" alt="">
+											<img src="{{ URL::asset('assets/img/covers/7.png') }}" alt="">
 											<span class="item__play">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 											</span>
@@ -1375,7 +1375,7 @@
 								<li class="splide__slide">
 									<div class="item item--carousel">
 										<a href="details1.html" class="item__cover">
-											<img src="img/covers/8.png" alt="">
+											<img src="{{ URL::asset('assets/img/covers/8.png') }}" alt="">
 											<span class="item__play">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 											</span>
@@ -1393,7 +1393,7 @@
 								<li class="splide__slide">
 									<div class="item item--carousel">
 										<a href="details1.html" class="item__cover">
-											<img src="img/covers/9.png" alt="">
+											<img src="{{ URL::asset('assets/img/covers/9.png') }}" alt="">
 											<span class="item__play">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 											</span>
@@ -1413,7 +1413,7 @@
 								<li class="splide__slide">
 									<div class="item item--carousel">
 										<a href="details1.html" class="item__cover">
-											<img src="img/covers/10.png" alt="">
+											<img src="{{ URL::asset('assets/img/covers/10.png') }}" alt="">
 											<span class="item__play">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 											</span>
@@ -1432,7 +1432,7 @@
 								<li class="splide__slide">
 									<div class="item item--carousel">
 										<a href="details1.html" class="item__cover">
-											<img src="img/covers/11.png" alt="">
+											<img src="{{ URL::asset('assets/img/covers/11.png') }}" alt="">
 											<span class="item__play">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 											</span>
@@ -1451,7 +1451,7 @@
 								<li class="splide__slide">
 									<div class="item item--carousel">
 										<a href="details1.html" class="item__cover">
-											<img src="img/covers/12.png" alt="">
+											<img src="{{ URL::asset('assets/img/covers/12.png') }}" alt="">
 											<span class="item__play">
 												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
 											</span>
@@ -1559,27 +1559,27 @@
 				<div class="col-12">
 					<div class="partners">
 						<a href="#" class="partners__item">
-							<img src="img/partners/themeforest-light-background.png" alt="">
+							<img src="{{ URL::asset('assets/img/partners/themeforest-light-background.png') }}" alt="">
 						</a>
 
 						<a href="#" class="partners__item">
-							<img src="img/partners/audiojungle-light-background.png" alt="">
+							<img src="{{ URL::asset('assets/img/partners/audiojungle-light-background.png') }}" alt="">
 						</a>
 
 						<a href="#" class="partners__item">
-							<img src="img/partners/codecanyon-light-background.png" alt="">
+							<img src="{{ URL::asset('assets/img/partners/codecanyon-light-background.png') }}" alt="">
 						</a>
 
 						<a href="#" class="partners__item">
-							<img src="img/partners/photodune-light-background.png" alt="">
+							<img src="{{ URL::asset('assets/img/partners/photodune-light-background.png') }}" alt="">
 						</a>
 
 						<a href="#" class="partners__item partners__item--prelast">
-							<img src="img/partners/activeden-light-background.png" alt="">
+							<img src="{{ URL::asset('assets/img/partners/activeden-light-background.png') }}" alt="">
 						</a>
 
 						<a href="#" class="partners__item partners__item--last">
-							<img src="img/partners/3docean-light-background.png" alt="">
+							<img src="{{ URL::asset('assets/img/partners/3docean-light-background.png') }}" alt="">
 						</a>
 					</div>
 				</div>
@@ -1594,7 +1594,7 @@
 			<div class="row">
 				<div class="col-12 col-md-8 order-md-1 col-lg-12 col-xl-4">
 					<div class="footer__logo">
-						<img src="img/logo.svg" alt="">
+						<img src="{{ URL::asset('assets/img/logo.svg') }}" alt="">
 					</div>
 					<p class="footer__tagline">Movies & TV Shows, Online cinema,<br> Movie database HTML Template. <br>The perfect choice for your project.</p>
 
@@ -1733,14 +1733,14 @@
 	<!-- end plan modal -->
 
 	<!-- JS -->
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/splide.min.js"></script>
-	<script src="js/smooth-scrollbar.js"></script>
-	<script src="js/slimselect.min.js"></script>
-	<script src="js/plyr.min.js"></script>
-	<script src="js/photoswipe.min.js"></script>
-	<script src="js/photoswipe-ui-default.min.js"></script>
-	<script src="js/main.js"></script>
+	<script src="{{ URL::asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+	<script src="{{ URL::asset('assets/js/splide.min.js') }}"></script>
+	<script src="{{ URL::asset('assets/js/smooth-scrollbar.js') }}"></script>
+	<script src="{{ URL::asset('assets/js/slimselect.min.js') }}"></script>
+	<script src="{{ URL::asset('assets/js/plyr.min.js') }}"></script>
+	<script src="{{ URL::asset('assets/js/photoswipe.min.js') }}"></script>
+	<script src="{{ URL::asset('assets/js/photoswipe-ui-default.min.js') }}"></script>
+	<script src="{{ URL::asset('assets/js/main.js') }}"></script>
 </body>
 
 <!-- /main/index2.html , Tue, 20 Jun 2023 21:36:36 GMT -->
