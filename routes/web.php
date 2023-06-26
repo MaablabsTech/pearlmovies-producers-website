@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home.index');
 });
+
+Route::get('/home/slider', function () {
+    return view('home.slider');
+})->name('home.slider');
+
+
