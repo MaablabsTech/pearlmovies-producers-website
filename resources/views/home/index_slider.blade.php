@@ -116,7 +116,7 @@
 						<div class="splide__track">
 							<ul class="splide__list">
 								<li class="splide__slide">
-									<div class="hero__slide" data-bg="{{ URL::asset('assets/imgbg/slide__bg-1.jpg') }}">
+									<div class="hero__slide" data-bg="{{ URL::asset('assets/img/bg/slide__bg-1.jpg') }}">
 										<div class="hero__content">
 											<h2 class="hero__title">Savage Beauty <sub>9.8</sub></h2>
 											<p class="hero__text">A brilliant scientist discovers a way to harness the power of the ocean's currents to create a new, renewable energy source. But when her groundbreaking technology falls into the wrong hands, she must race against time to stop it from being used for evil.</p>
@@ -134,7 +134,7 @@
 									</div>
 								</li>
 								<li class="splide__slide">
-									<div class="hero__slide" data-bg="{{ URL::asset('assets/imgbg/slide__bg-2.jpg') }}">
+									<div class="hero__slide" data-bg="{{ URL::asset('assets/img/bg/slide__bg-2.jpg') }}">
 										<div class="hero__content">
 											<h2 class="hero__title">Voices from the Other Side <sub>7.1</sub></h2>
 											<p class="hero__text">In a world where magic is outlawed and hunted, a young witch must use her powers to fight back against the corrupt authorities who seek to destroy her kind.</p>
@@ -151,7 +151,7 @@
 									</div>
 								</li>
 								<li class="splide__slide">
-									<div class="hero__slide" data-bg="{{ URL::asset('assets/imgbg/slide__bg-3.jpg') }}">
+									<div class="hero__slide" data-bg="{{ URL::asset('assets/img/bg/slide__bg-3.jpg') }}">
 										<div class="hero__content">
 											<h2 class="hero__title">Endless Horizon <sub>8.6</sub></h2>
 											<p class="hero__text">When a renowned archaeologist goes missing, his daughter sets out on a perilous journey to the heart of the Amazon rainforest to find him. Along the way, she discovers a hidden city and a dangerous conspiracy that threatens the very balance of power in the world.</p>
