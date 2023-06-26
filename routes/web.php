@@ -18,7 +18,8 @@ Route::get('/', function () {
 });
 
 Route::get('/home/slider', function () {
-    return view('home.slider');
+    return view('home.index_slider');
+    
 })->name('home.slider');
 
 
