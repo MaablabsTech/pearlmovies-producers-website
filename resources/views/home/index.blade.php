@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="{{ URL::asset('assets/css/main.css') }}">
 
 	<!-- Favicons -->
-	<link rel="icon" type="image/png') }}" href="{{ URL::asset('assets/icon/favicon-32x32.png') }}" sizes="32x32">
+	<link rel="icon" type="image/png" href="{{ URL::asset('assets/icon/favicon-32x32.png') }}" sizes="32x32">
 	<link rel="apple-touch-icon" href="{{ URL::asset('assets/icon/favicon-32x32.png') }}">
 
 	<meta name="description" content="Movie partners Template">

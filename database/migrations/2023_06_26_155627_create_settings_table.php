@@ -39,7 +39,7 @@ return new class extends Migration
             $table->string('system_email');
             $table->string('system_phone_number');
             $table->string('system_phone_number_alt');
-            $table->timestamps();;
+            $table->timestamps();
         });
     }
 
