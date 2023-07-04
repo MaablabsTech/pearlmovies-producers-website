@@ -13,13 +13,11 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('home.index');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/home/slider', function () {
     return view('home.index_slider');
     
 })->name('home.slider');
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+
