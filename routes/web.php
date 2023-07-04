@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,4 +22,4 @@ Route::get('/home/slider', function () {
     
 })->name('home.slider');
 
-
+Route::get('/', [HomeController::class, 'index'])->name('home');
