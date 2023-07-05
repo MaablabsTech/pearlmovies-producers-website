@@ -21,7 +21,7 @@
 	<meta name="description" content="Movie partners Template">
 	<meta name="keywords" content="">
 	<meta name="author" content="Maablabs Technologies Ltd">
-	<title>{{config('app.name')}} – Movie partners Template</title>
+	<title>{{ $system_name ?? config('app.name') }} - Home</title>
 
 </head>
 <body>
@@ -105,7 +105,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h1 class="home__title"><b>NEW ITEMS</b> OF THIS SEASON</h1>
+					<h1 class="home__title"><b>Welcome to</b> {{ $system_name }}</h1>
 				</div>
 
 				<div class="col-12">
