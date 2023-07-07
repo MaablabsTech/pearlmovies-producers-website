@@ -13,4 +13,15 @@ class MovieCast extends Model
         'actor_id',
         'is_director'
     ];
+
+    public function movie()
+    {
+        return $this->hasOne(Movie::class, 'movie_id', 'id');
+    }
+
+    public function actor()
+    {
+        return $this->hasOne(Actor::class, 'actor_id', 'id');
+    }
+
 }
