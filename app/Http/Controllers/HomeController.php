@@ -1,16 +1,10 @@
 <?php
 
-
-
 namespace App\Http\Controllers;
 
-
-
 use App\Models\Setting;
-
+use App\Models\Movie;
 use Illuminate\Http\Request;
-
-
 
 class HomeController extends Controller
 
@@ -20,9 +14,13 @@ class HomeController extends Controller
     {
         $setting = Setting::first();
 
+        $featured_movies = Movie::orderBy('created_at', 'desc')
+                                ->limit(10)
+                                ->get();
         $data = [
             'system_name' => $setting->system_name,
             'setting' => $setting,
+            'featured_movies' => $featured_movies,
         ];
 
         if ($setting->home_page_style === 'slider') {
