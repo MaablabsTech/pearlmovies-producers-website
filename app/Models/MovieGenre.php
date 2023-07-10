@@ -11,12 +11,18 @@ class MovieGenre extends Model
 
     protected $table = 'movie_genres';
 
-    protected $primaryKey = 'id';
-
     protected $fillable = [
         'movie_id',
         'genre_id',
     ];
 
-    public $timestamps = true;
+    public function movies()
+    {
+        return $this->hasMany(Movie::class, 'id', 'movie_id');
+    }
+
+    public function genre()
+    {
+        return $this->hasOne(Genre::class, 'id', 'genre_id');
+    }
 }
