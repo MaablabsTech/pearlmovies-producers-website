@@ -33,5 +33,9 @@ class Movie extends Model
     {
         return $this->hasMany(MoviePhoto::class, 'movie', 'id');
     }
-
+    
+    public function genres()
+    {
+        return $this->hasMany(MovieGenre::class, 'movie_id', 'id');
+    }
 }
