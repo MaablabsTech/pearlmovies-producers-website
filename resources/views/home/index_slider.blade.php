@@ -22,7 +22,7 @@
 	<meta name="description" content="Movie partners Template">
 	<meta name="keywords" content="">
 	<meta name="author" content="Maablabs Technologies Ltd">
-    <title>{{config('app.name')}} – Movie partners Template</title>
+    <title>{{ $system_name ?? config('app.name') }}</title>
 
 </head>
 <body>
@@ -115,59 +115,30 @@
 						
 						<div class="splide__track">
 							<ul class="splide__list">
-								<li class="splide__slide">
-									<div class="hero__slide" data-bg="{{ URL::asset('assets/img/bg/slide__bg-1.jpg') }}">
-										<div class="hero__content">
-											<h2 class="hero__title">Savage Beauty <sub>9.8</sub></h2>
-											<p class="hero__text">A brilliant scientist discovers a way to harness the power of the ocean's currents to create a new, renewable energy source. But when her groundbreaking technology falls into the wrong hands, she must race against time to stop it from being used for evil.</p>
-											<p class="hero__category">
-												<a href="#">Action</a>
-												<a href="#">Drama</a>
-												<a href="#">Comedy</a>
-											</p>
-											<div class="hero__actions">
-												<a href="details.html" class="hero__btn">
-													<span>Watch now</span>
-												</a>
+								
+								@foreach ($featured_movies as $featured_movie)
+
+									<li class="splide__slide">
+										<div class="hero__slide" data-bg="{{ $featured_movie->poster_path != 'default' ? $featured_movie->poster_path : URL::asset('assets/img/cover/13.jpg') }}">
+											<div class="hero__content">
+												<h2 class="hero__title">{{ $featured_movie->title }} <sub>{{ $featured_movie->rating }}</sub></h2>
+												<p class="hero__text">{{ $featured_movie->synopsis }}</p>
+												<p class="hero__category">
+													<a href="#">Action</a>
+													<a href="#">Drama</a>
+													<a href="#">Comedy</a>
+												</p>
+												<div class="hero__actions">
+													<a href="details.html" class="hero__btn">
+														<span>Watch now</span>
+													</a>
+												</div>
 											</div>
 										</div>
-									</div>
-								</li>
-								<li class="splide__slide">
-									<div class="hero__slide" data-bg="{{ URL::asset('assets/img/bg/slide__bg-2.jpg') }}">
-										<div class="hero__content">
-											<h2 class="hero__title">Voices from the Other Side <sub>7.1</sub></h2>
-											<p class="hero__text">In a world where magic is outlawed and hunted, a young witch must use her powers to fight back against the corrupt authorities who seek to destroy her kind.</p>
-											<p class="hero__category">
-												<a href="#">Adventure</a>
-												<a href="#">Triler</a>
-											</p>
-											<div class="hero__actions">
-												<a href="details.html" class="hero__btn">
-													<span>Watch now</span>
-												</a>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li class="splide__slide">
-									<div class="hero__slide" data-bg="{{ URL::asset('assets/img/bg/slide__bg-3.jpg') }}">
-										<div class="hero__content">
-											<h2 class="hero__title">Endless Horizon <sub>8.6</sub></h2>
-											<p class="hero__text">When a renowned archaeologist goes missing, his daughter sets out on a perilous journey to the heart of the Amazon rainforest to find him. Along the way, she discovers a hidden city and a dangerous conspiracy that threatens the very balance of power in the world.</p>
-											<p class="hero__category">
-												<a href="#">Action</a>
-												<a href="#">Drama</a>
-												<a href="#">Triler</a>
-											</p>
-											<div class="hero__actions">
-												<a href="details.html" class="hero__btn">
-													<span>Watch now</span>
-												</a>
-											</div>
-										</div>
-									</div>
-								</li>
+									</li>
+								
+								@endforeach
+
 							</ul>
 						</div>
 					</div>
