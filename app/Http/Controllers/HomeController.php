@@ -24,7 +24,7 @@ class HomeController extends Controller
         ];
 
         if ($setting->home_page_style === 'slider') {
-            return view('home.index_slider', ['data' => $data, 'featured_movies' => $featured_movies]);
+            return view('home.index_slider');
         } else {
             return view('home.index')->with($data);
         }
