@@ -107,182 +107,37 @@
 				<div class="col-12">
 					<h1 class="home__title"><b>Welcome to</b> {{ $system_name }}</h1>
 				</div>
-
+	
 				<div class="col-12">
 					<div class="home__carousel splide splide--home">
 						<div class="splide__arrows">
 							<button class="splide__arrow splide__arrow--prev" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17,11H9.41l3.3-3.29a1,1,0,1,0-1.42-1.42l-5,5a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l5,5a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L9.41,13H17a1,1,0,0,0,0-2Z"/></svg></button>
 							<button class="splide__arrow splide__arrow--next" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z"/></svg></button>
 						</div>
-
+	
 						<div class="splide__track">
 							<ul class="splide__list">
-								<li class="splide__slide">
-									<div class="item item--big">
-										<a href="details1.html" class="item__cover">
-											<img src="{{ URL::asset('assets/img/covers/13.png') }}" alt="">
-											<span class="item__play">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
-											</span>
-										</a>
-										<div class="item__content">
-											<h3 class="item__title"><a href="details1.html">The Edge of Tomorrow</a></h3>
-											<span class="item__category">
-												<a href="#">Action</a>
-												<a href="#">Sci-Fi</a>
-											</span>
-											<span class="item__rate">8.4</span>
+								@foreach ($featured_movies as $featured_movie)
+									<li class="splide__slide">
+										<div class="item item--big">
+											<a href="details1.html" class="item__cover">
+												<img src="{{$featured_movie->poster_path == 'default' ? URL::asset('assets/img/cover/13.jpg') : URL::asset($featured_movie->poster_path)}}" 
+												<span class="item__play">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
+												</span>
+											</a>
+											<div class="item__content">
+												<h3 class="item__title"><a href="details1.html">{{ $featured_movie->title }}</a></h3>
+												<span class="item__category">
+													@foreach ($featured_movie->categories as $category)
+														<a href="#">{{ $category->name }}</a>
+													@endforeach
+												</span>
+												<span class="item__rate">{{ $featured_movie->rating }}</span>
+											</div>
 										</div>
-									</div>
-								</li>
-
-								<li class="splide__slide">
-									<div class="item item--big">
-										<a href="details1.html" class="item__cover">
-											<img src="{{ URL::asset('assets/img/covers/16.png') }}" alt="">
-											<span class="item__play">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
-											</span>
-										</a>
-										<div class="item__content">
-											<h3 class="item__title"><a href="details1.html">Beyond the Horizon</a></h3>
-											<span class="item__category">
-												<a href="#">Drama</a>
-											</span>
-											<span class="item__rate">7.1</span>
-										</div>
-									</div>
-								</li>
-
-								<li class="splide__slide">
-									<div class="item item--big">
-										<a href="details1.html" class="item__cover">
-											<img src="{{ URL::asset('assets/img/covers/4.png') }}" alt="">
-											<span class="item__play">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
-											</span>
-										</a>
-										<div class="item__content">
-											<h3 class="item__title"><a href="details1.html">Blindspotting</a></h3>
-											<span class="item__category">
-												<a href="#">Comedy</a>
-												<a href="#">Drama</a>
-											</span>
-											<span class="item__rate">7.9</span>
-										</div>
-									</div>
-								</li>
-
-								<li class="splide__slide">
-									<div class="item item--big">
-										<a href="details1.html" class="item__cover">
-											<img src="{{ URL::asset('assets/img/covers/3.png') }}" alt="">
-											<span class="item__play">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
-											</span>
-										</a>
-										<div class="item__content">
-											<h3 class="item__title"><a href="details1.html">Shattered Dreams</a></h3>
-											<span class="item__category">
-												<a href="#">Drama</a>
-												<a href="#">Romance</a>
-											</span>
-											<span class="item__rate">6.3</span>
-										</div>
-									</div>
-								</li>
-
-								<li class="splide__slide">
-									<div class="item item--big">
-										<a href="details1.html" class="item__cover">
-											<img src="{{ URL::asset('assets/img/covers/10.png') }}" alt="">
-											<span class="item__play">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
-											</span>
-										</a>
-										<div class="item__content">
-											<h3 class="item__title"><a href="details1.html">Echoes of the Past</a></h3>
-											<span class="item__category">
-												<a href="#">Fantasy</a>
-											</span>
-											<span class="item__rate">9.0</span>
-										</div>
-									</div>
-								</li>
-
-								<li class="splide__slide">
-									<div class="item item--big">
-										<a href="details1.html" class="item__cover">
-											<img src="{{ URL::asset('assets/img/covers/5.png') }}" alt="">
-											<span class="item__play">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
-											</span>
-										</a>
-										<div class="item__content">
-											<h3 class="item__title"><a href="details1.html">Tales from the Underworld</a></h3>
-											<span class="item__category">
-												<a href="#">Action</a>
-												<a href="#">Western</a>
-											</span>
-											<span class="item__rate">8.6</span>
-										</div>
-									</div>
-								</li>
-
-								<li class="splide__slide">
-									<div class="item item--big">
-										<a href="details1.html" class="item__cover">
-											<img src="{{ URL::asset('assets/img/covers/6.png') }}" alt="">
-											<span class="item__play">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
-											</span>
-										</a>
-										<div class="item__content">
-											<h3 class="item__title"><a href="details1.html">Midnight Sun</a></h3>
-											<span class="item__category">
-												<a href="#">Drama</a>
-											</span>
-											<span class="item__rate">7.7</span>
-										</div>
-									</div>
-								</li>
-
-								<li class="splide__slide">
-									<div class="item item--big">
-										<a href="details1.html" class="item__cover">
-											<img src="{{ URL::asset('assets/img/covers/7.png') }}" alt="">
-											<span class="item__play">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
-											</span>
-										</a>
-										<div class="item__content">
-											<h3 class="item__title"><a href="details1.html">Wild Hearts</a></h3>
-											<span class="item__category">
-												<a href="#">Comedy</a>
-											</span>
-											<span class="item__rate">8.2</span>
-										</div>
-									</div>
-								</li>
-
-								<li class="splide__slide">
-									<div class="item item--big">
-										<a href="details1.html" class="item__cover">
-											<img src="{{ URL::asset('assets/img/covers/12.png') }}" alt="">
-											<span class="item__play">
-												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
-											</span>
-										</a>
-										<div class="item__content">
-											<h3 class="item__title"><a href="details1.html">The Last Hope</a></h3>
-											<span class="item__category">
-												<a href="#">Animals</a>
-												<a href="#">Documentary</a>
-											</span>
-											<span class="item__rate">7.3</span>
-										</div>
-									</div>
-								</li>
+									</li>
+								@endforeach
 							</ul>
 						</div>
 					</div>
@@ -290,6 +145,7 @@
 			</div>
 		</div>
 	</section>
+	
 	<!-- end home -->
 
 	<!-- content -->
