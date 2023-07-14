@@ -119,14 +119,18 @@
 								@foreach ($featured_movies as $featured_movie)
 
 									<li class="splide__slide">
-										<div class="hero__slide" data-bg="{{ $featured_movie->poster_path != 'default' ? $featured_movie->poster_path : URL::asset('assets/img/cover/13.jpg') }}">
+										<div class="hero__slide" data-bg="{{ $featured_movie->poster_path != 'default' ? URL::asset($featured_movie->poster_path) : URL::asset('assets/img/cover/13.jpg') }}">
 											<div class="hero__content">
 												<h2 class="hero__title">{{ $featured_movie->title }} <sub>{{ $featured_movie->rating }}</sub></h2>
 												<p class="hero__text">{{ $featured_movie->synopsis }}</p>
+
 												<p class="hero__category">
-													<a href="#">Action</a>
-													<a href="#">Drama</a>
-													<a href="#">Comedy</a>
+
+													@foreach ($featured_movie->categories as $catergory)
+
+														<a href="#">{{ $catergory->name }}</a>
+													
+													@endforeach
 												</p>
 												<div class="hero__actions">
 													<a href="details.html" class="hero__btn">
