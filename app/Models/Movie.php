@@ -38,4 +38,8 @@ class Movie extends Model
     {
         return $this->hasMany(MovieGenre::class, 'movie_id', 'id');
     }
+    public function seasons()
+    {
+        return $this->hasMany(SerieSeason::class, 'movie_id', 'id');
+    }
 }
