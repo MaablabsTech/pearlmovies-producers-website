@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Models\Setting;
+use App\Models\Movie;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,7 +18,30 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/home/slider', function () {
-    return view('home.index_slider');
+
+    $setting = Setting::first();
+
+        $featured_movies = Movie::orderBy('created_at', 'desc')
+                                ->limit(10)
+                                ->get();
+        $recent_movies = Movie::where('is_serie', 0)
+                                ->orderBy('created_at', 'desc')
+                                ->limit(10)
+                                ->get();
+        $recent_series = Movie::where('is_serie', 1)
+                                ->orderBy('created_at', 'desc')
+                                ->limit(10)
+                                ->get();
+
+        $data = [
+            'system_name' => $setting->system_name,
+            'setting' => $setting,
+            'featured_movies' => $featured_movies,
+            'recent_movies' => $recent_movies,
+            'recent_series' => $recent_series,
+        ];
+
+    return view('home.index_slider')->with($data);
     
 })->name('home.slider');
 

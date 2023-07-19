@@ -119,18 +119,29 @@
 								@foreach ($featured_movies as $featured_movie)
 
 									<li class="splide__slide">
-										<div class="hero__slide" data-bg="{{ $featured_movie->poster_path != 'default' ? URL::asset($featured_movie->poster_path) : URL::asset('assets/img/cover/13.jpg') }}">
+										<div class="hero__slide" data-bg="{{ $featured_movie->poster_path != 'default' ? URL::asset($featured_movie->poster_path) : URL::asset('assets/img/covers/13.png') }}">
 											<div class="hero__content">
 												<h2 class="hero__title">{{ $featured_movie->title }} <sub>{{ $featured_movie->rating }}</sub></h2>
+												
+												<style type="text/css">
+													p {
+                                               display: -webkit-box;
+                                              -webkit-line-clamp: 5;
+                                              -webkit-box-orient: vertical;
+                                               overflow: hidden;
+                                            }
+											    </style>		
 												<p class="hero__text">{{ $featured_movie->synopsis }}</p>
-
+                                                
+                                                
 												<p class="hero__category">
-
+                                                    @if($featured_movie->categories != null)
 													@foreach ($featured_movie->categories as $category)
 
-														<a href="#">{{ $category->name }}</a>
+														<a href="#">{{ $category->name }},</a>
 													
 													@endforeach
+													@endif
 												</p>
 												<div class="hero__actions">
 													<a href="details.html" class="hero__btn">
@@ -201,10 +212,11 @@
 									<div class="item__content">
 										<h3 class="item__title"><a href="details1.html">{{ $movie->title }}</a></h3>
 										<span class="item__category">
-
+										@if($movie->categories != null)
 											@foreach ($movie->categories as $category)
 												<a href="#">{{ $category->name }}</a>
 											@endforeach
+									    @endif		
 
 										</span>
 										<div class="item__wrap">
@@ -244,11 +256,11 @@
 									<div class="item__content">
 										<h3 class="item__title"><a href="details1.html">{{ $series->title }}</a></h3>
 										<span class="item__category">
-
+										@if($series->categories != null)
 											@foreach ($series->categories as $category)
 												<a href="#">{{ $category->name }}</a>
 											@endforeach
-
+                                       @endif
 										</span>
 										<span class="item__rate">{{ $series->rating }}</span>
 									</div>
