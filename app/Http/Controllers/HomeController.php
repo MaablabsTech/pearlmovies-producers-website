@@ -17,10 +17,21 @@ class HomeController extends Controller
         $featured_movies = Movie::orderBy('created_at', 'desc')
                                 ->limit(10)
                                 ->get();
+        $recent_movies = Movie::where('is_serie', 0)
+                                ->orderBy('created_at', 'desc')
+                                ->limit(10)
+                                ->get();
+        $recent_series = Movie::where('is_serie', 1)
+                                ->orderBy('created_at', 'desc')
+                                ->limit(10)
+                                ->get();
+
         $data = [
             'system_name' => $setting->system_name,
             'setting' => $setting,
             'featured_movies' => $featured_movies,
+            'recent_movies' => $recent_movies,
+            'recent_series' => $recent_series,
         ];
 
         if ($setting->home_page_style === 'slider') {
