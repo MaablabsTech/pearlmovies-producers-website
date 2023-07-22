@@ -14,7 +14,7 @@ class MovieController extends Controller
         if (!is_null($movie)) {
             return view('movie.detail')->with($movie);
         } else {
-            return view('home.index');
+            return redirect()->route('home');
         }
     }
 }
