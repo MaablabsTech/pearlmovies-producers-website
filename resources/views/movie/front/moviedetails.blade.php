@@ -133,13 +133,13 @@
 								<span class="item__rate">{{ $movie->rating }}</span>
 
 								<ul class="item__list">
-									<li>{{ $movie->video_quality }}</li>
+									<li>{{ $movie->video_quality->name }}</li>
 									<li>{{ $movie->pg_rate }}</li>
 								</ul>
 							</div>
 
 							<ul class="item__meta">
-								<li><span>Genre:</span> <a href="#">Action</a> <a href="#">Triler</a></li>
+								<li><span>Genre:</span> @foreach ($movie->genres as $genre) <a href="#">{{ $genre }}</a> @endforeach
 								<li><span>Running time:</span> {{ $movie->running_time }}</li>
 								<li><span>Country:</span> <a href="#">{{ $movie->country }}</a></li>
 								<li><span>Premiere:</span> {{  $movie->release_date }}</li>
