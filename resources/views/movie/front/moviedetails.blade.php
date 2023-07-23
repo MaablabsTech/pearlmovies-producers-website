@@ -133,7 +133,7 @@
 								<span class="item__rate">{{ $movie->rating }}</span>
 
 								<ul class="item__list">
-									<li>{{ $movie->video_quality->name }}</li>
+									<li>{{ $movie->videoQuality->name }}</li>
 									<li>{{ $movie->pg_rate }}</li>
 								</ul>
 							</div>
