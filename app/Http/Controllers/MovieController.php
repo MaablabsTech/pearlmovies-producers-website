@@ -7,14 +7,14 @@ use App\Models\Movie;
 
 class MovieController extends Controller
 {
-    public  movie_details(string $slug) {
+    public movie_details(string $slug) {
         
         $movie = Movie::where('slug', $slug)->get();
 
         if (!is_null($movie)) {
             return view('movie.detail')->with($movie);
         } else {
-            return view('home.index');
+            redirect('/');
         }
     }
 }
