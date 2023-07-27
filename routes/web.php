@@ -27,6 +27,7 @@ Route::get('/home/slider', function () {
         $recent_movies = Movie::where('is_serie', 0)
                                 ->orderBy('created_at', 'desc')
                                 ->limit(10)
+                     
                                 ->get();
         $recent_series = Movie::where('is_serie', 1)
                                 ->orderBy('created_at', 'desc')
