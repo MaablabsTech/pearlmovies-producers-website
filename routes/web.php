@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MovieController;
 use App\Models\Setting;
 use App\Models\Movie;
 /*
@@ -45,4 +46,4 @@ Route::get('/home/slider', function () {
     
 })->name('home.slider');
 
-
+Route::get('/movie/{slug}', [MovieController::class, 'movie_detail'])->name('movie.detail');
