@@ -22,7 +22,7 @@
 	<meta name="description" content="Movie partners Template">
 	<meta name="keywords" content="">
 	<meta name="author" content="Maablabs Technologies Ltd">
-	<title>MTL – Movie partners Template</title>
+	<title>{{config('app.name')}}</title>
 
 </head>
 <body>
