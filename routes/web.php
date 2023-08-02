@@ -48,3 +48,4 @@ Route::get('/home/slider', function () {
 })->name('home.slider');
 
 Route::get('/movie/{slug}', [MovieController::class, 'movie_detail'])->name('movie.detail');
+Route::get('page/{slug}', [PageController::class, 'index'])->name('page');
