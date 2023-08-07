@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use BeyondCode\Comments\Traits\HasComments;
 
 class Movie extends Model
 {
+    use HasComments;
+    
     protected $table = 'movies';
 
     protected $fillable = [
