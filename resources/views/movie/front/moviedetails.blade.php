@@ -453,7 +453,7 @@
 									@foreach ($movie->moviePhotos as $photo)
 										<!-- gallery item -->
 										<figure class="col-12 col-sm-6 col-xl-4" itemprop="associatedMedia" itemscope>
-											<a href="{{ $photo->url }}" itemprop="contentUrl" data-size="1920x1280">
+											<a href="{{ URL::asset($photo->url) }}" itemprop="contentUrl" data-size="1920x1280">
 												<img src="{{ URL::asset($photo->url) }}" itemprop="thumbnail" alt="{{ $movie->title }}" />
 											</a>
 											<figcaption itemprop="caption description">{{ $movie->title }}</figcaption>
