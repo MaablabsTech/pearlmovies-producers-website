@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MovieController;
-use App\Http\Models\Page;
+use App\Http\Controllers\PageController;
 use App\Models\Setting;
 use App\Models\Movie;
 /*

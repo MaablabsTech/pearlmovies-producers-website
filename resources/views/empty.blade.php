@@ -1,4 +1,4 @@
-@extends('views.layout.particles')
+@extends('views.home.layout.particles')
 
 @section('title', $page->title)
 
@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    @include('views.layout.particles.header')
+    @include('views.home.layout.particles.header')
 
     <section class="section">
         <div class="container">
@@ -19,5 +19,5 @@
         </div>
     </section>
 
-    @include('views.layout.particles.footer')
+    @include('views.home.layout.particles.footer')
 @endsection
