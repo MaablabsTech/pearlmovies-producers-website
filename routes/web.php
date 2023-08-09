@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MovieController;
+use App\Http\Models\Page;
 use App\Models\Setting;
 use App\Models\Movie;
 /*
@@ -48,4 +49,5 @@ Route::get('/home/slider', function () {
 })->name('home.slider');
 
 Route::get('/movie/{slug}', [MovieController::class, 'movie_detail'])->name('movie.detail');
-Route::get('page/{slug}', [PageController::class, 'index'])->name('page');
+
+Route::get('/page/{slug}', [PageController::class, 'index'])->name('page');
