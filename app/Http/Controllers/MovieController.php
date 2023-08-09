@@ -7,7 +7,7 @@ use App\Models\Movie;
 
 class MovieController extends Controller
 {
-    public movie_details(string $slug) {
+    public function movie_details(string $slug) {
         
         $movie = Movie::where('slug', $slug)->get();
 
