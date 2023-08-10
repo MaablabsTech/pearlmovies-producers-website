@@ -3,11 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-/*use BeyondCode\Comments\Traits\HasComments;*/
+use BeyondCode\Comments\Traits\HasComments;
 
 class Movie extends Model
 {
-    /*use HasComments;*/
+    use HasComments;
     
     protected $table = 'movies';
 
