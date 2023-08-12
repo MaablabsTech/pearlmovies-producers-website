@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\PageController;
 use App\Models\Setting;
 use App\Models\Movie;
 /*
@@ -28,6 +29,7 @@ Route::get('/home/slider', function () {
         $recent_movies = Movie::where('is_serie', 0)
                                 ->orderBy('created_at', 'desc')
                                 ->limit(10)
+                     
                                 ->get();
         $recent_series = Movie::where('is_serie', 1)
                                 ->orderBy('created_at', 'desc')
@@ -47,3 +49,5 @@ Route::get('/home/slider', function () {
 })->name('home.slider');
 
 Route::get('/movie/{slug}', [MovieController::class, 'movie_detail'])->name('movie.detail');
+
+Route::get('/page/{slug}', [PageController::class, 'index'])->name('page');
